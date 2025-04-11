@@ -9,14 +9,13 @@ import plotly.graph_objects as go
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import nltk
+
 nltk.download('punkt')
 nltk.download('stopwords')
 
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
 
 df = pd.read_csv("US-Economic-News.csv", encoding='unicode_escape')
-
-print(df['headline'])
 
 corpus_embeddings = embedder.encode(df["headline"].tolist())
 
