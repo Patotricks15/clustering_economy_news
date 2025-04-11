@@ -96,3 +96,7 @@ The script will:
 - Cluster keywords are extracted after removing common English stopwords.
 
 ---
+
+## Result
+
+![plot](us_economy_news_plot.png)
